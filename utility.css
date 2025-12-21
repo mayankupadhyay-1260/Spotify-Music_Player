@@ -1,0 +1,45 @@
+.flex {
+    display: flex;
+}
+
+.justify-content {
+    justify-content: center;
+}
+
+.align-items {
+    align-items: center;
+}
+
+.height {
+    height: 30px;
+}
+
+.width {
+    width: 20px;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.border {
+    border-radius: 10px;
+}
+
+.border-round {
+    border-radius: 50%;
+}
+
+.m-1 {
+    margin: 2px;
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.stand {
+    border: 1px solid white;
+    height: 20px;
+    width: 0px;
+}

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    --search-textColor: #c7c7c7bb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.navbar {
+    margin: 5px;
+    border-radius: 20px;
+    height: 40px;
+    padding: 12px;
+    justify-content: space-between;
+    /* background-color: #1f1f1f; */
+
+    .left {
+        gap: 10px;
+
+        .logo {
+            margin: 0 20px 0 5px;
+        }
+
+        .search {
+            background-color: #1f1f1f;
+        }
+
+        .home {
+            /* background-color: #1f1f1f;    */
+            border: 2px solid black;
+            border-style: hidden;
+            padding: 12px;
+            width: 20px;
+        }
+
+        .searchbox {
+            width: 400px;
+            height: 40px;
+            padding: 3px;
+            background-color: #1f1f1f;
+            border: 2px solid white;
+            border-style: hidden;
+            border-radius: 40px;
+
+            div {
+                gap: 5px;
+                color: var(--search-textColor);
+
+                >span {
+                    margin: 0 2px 0 10px;
+                }
+
+                input {
+                    height: 22px;
+                    background-color: #1f1f1f;
+                    border-style: hidden;
+                    width: fit-content;
+                    color: var(--search-textColor);
+                }
+
+                input:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+
+
+
+
+.right {
+    gap: 25px;
+}
+
+.buttons {
+    gap: 5px;
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+}
+
+.signupLogin {
+    gap: 15px;
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        font-family: 'poppins', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: 500;
+
+    }
+
+    :nth-child(2) {
+        border: 2px solid white;
+        background-color: white;
+        color: black;
+        border-radius: 30px;
+        padding: 12px 22px;
+    }
+}
+
+}

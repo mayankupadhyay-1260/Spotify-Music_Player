@@ -175,53 +175,47 @@ main {
 
         .cards {
             flex-direction: column;
-            height: 250px;
+            height: 65vh;
             width: 99%;
             border: 1px solid white;
             border-style: hidden;
             font-weight: bold;
-            overflow-y: scroll;
+            overflow-y: hidden;
             scroll-behavior: smooth;
             gap: 20px;
         }
 
         .card-column {
             justify-content: flex-start;
-            height: 200px;
-            margin: 10px;
+            height: 90%;
+            margin: 8px 8px;
             border: 1px solid var(--search-textColor);
             background-color: #1e1e1e;
-            border-radius: 20px;
+            border-radius: 13px;
             flex-direction: column;
             gap: 5px;
-            padding: 18px 0px 15px 20px;
+            padding: 13px 0px 15px 0px;
         }
 
-        .card-column :first-child {
-            margin-bottom: 5px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            font-size: larger;
-        }
+        .card-column ul {
+            margin-bottom: 2px;
+            list-style-type: decimal;
+            overflow-y: scroll;
 
-        .card-column :nth-child(2) {
-            margin-bottom: 30px;
-            font-size: medium;
-        }
-
-        .card-column :nth-child(3) {
-            a {
-                border: 2px solid white;
-                background-color: white;
-                padding: 5px 15px;
-                border-radius: 30px;
-                text-decoration: none;
-                color: black;
-                font-size: 14px;
-                font-family: 'poppins', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-                font-weight: 800;
-
+            li {
+                padding: 5px;
+                font-family: poppins,Georgia, 'Times New Roman', Times, serif;
+                font-size: small;
+                gap: 40px;
             }
-
+        }
+        
+        .card-column li{
+            .info{
+                justify-content: flex-start;
+                cursor: pointer;
+                gap: 4px;
+            }
         }
 
 
@@ -319,23 +313,24 @@ main {
         .artist-card {
             width: 100%;
         }
-        
-        .playbar{
+
+        .playbar {
             position: fixed;
+            gap: 20px;
             bottom: 8px;
-            height: 5vh;
+            height: 7vh;
             border: 2px solid white;
             border-radius: 10px;
-            width: 72%;
-            background-color: rgb(62, 90, 59);
+            width: 69vw;
+            background-color: rgb(69 139 61);
             z-index: 10;
-            
-            div{
+
+            div {
                 gap: 10px;
-                
+
             }
         }
-        
+
     }
 }
 

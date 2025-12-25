@@ -1,19 +1,28 @@
+/* Flex */
+
 .flex {
     display: flex;
 }
 
-.justify-content {
+.justify-center {
     justify-content: center;
+}
+
+.justify-between{
+    justify-content: space-between;
 }
 
 .align-items {
     align-items: center;
 }
 
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
 .height {
     height: 30px;
 }
-
 .width {
     width: 20px;
 }
@@ -24,6 +33,10 @@
 
 .border {
     border-radius: 10px;
+}
+
+.border-hidden{
+    border-style: hidden;
 }
 
 .border-round {
@@ -42,4 +55,8 @@
     border: 1px solid white;
     height: 20px;
     width: 0px;
+}
+
+.justify-self{
+    justify-self: center;
 }

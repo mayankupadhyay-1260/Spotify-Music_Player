@@ -10,13 +10,18 @@
 </head>
 
 <body>
+
+    <!--                          Navbar                       -->
+
     <nav class="navbar flex align-items">
         <div class="left flex align-items">
             <div class="logo flex invert">
-                <img src="logo.svg" alt="spotify">
+                <a href="/home.svg">
+                    <img src="logo.svg" alt="spotify">
+                </a>
             </div>
-            <div class="search flex align-items justify-content border-round">
-                <div class="home flex justify-content align-items invert border-round">
+            <div class="search flex align-items justify-center border-round">
+                <div class="home flex justify-center align-items invert border-round">
                     <img src="home.svg" alt="home">
                 </div>
             </div>
@@ -25,8 +30,11 @@
                     <span>
                         <img src="searchButton.svg" alt="search" class="invert width">
                     </span>
-                    <input type="text" placeholder="What are you listening to">
+                    <input id="searchInput" autocomplete="off" type="text" placeholder="What are you listening to">
                 </div>
+                <span class="invert">
+                    <img src="bucketButton.svg" alt="cart">
+                </span>
             </form>
 
         </div>
@@ -46,7 +54,119 @@
 
     </nav>
 
+    <!--                             Main                           -->
 
+    <main class="flex">
+        <aside class="flex">
+
+            <div class="libraryCard flex justify-between">
+                <h2>Your Library</h2>
+                <span class="flex justify-center align-items">
+                    <img src="plusicon.svg" alt="plus" class="height width invert">
+                </span>
+
+            </div>
+
+            <div class="cards flex">
+                <div class="card-column flex">
+                    <!-- <div>Create your first playlist</div>
+                    <div>It's easy,we'll help you</div>
+                    <span><a href="/home.svg">Create Playlist</a></span> -->
+
+                    <ul>
+                        <li>1. song name</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <footer class="flex">
+                <div>
+                    <a href="https://www.spotify.com/in-en/legal/">Legal</a>
+                    <a href="https://www.spotify.com/in-en/safetyandprivacy/">Safety &amp; Privacy Center</a>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a>
+                    <a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a>
+                    <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a>
+                    <a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a>
+
+                    <a href="https://www.spotify.com/legal/cookies-policy/" target="_blank" rel="noopener"
+                        draggable="false">
+                        Cookies
+                    </a>
+
+                    <button>
+                        English
+                    </button>
+
+                </div>
+            </footer>
+
+        </aside>
+
+        <section class="border">
+            <div class="childNav flex justify-center">
+                <div class="top flex justify-between align-items border-hidden">
+                    <div>Trending Songs</div>
+                    <span>Show all</span>
+                </div>
+            </div>
+
+            <div class="mainArea justify-self">
+                <div class="songArea flex flex-wrap">
+                    <div class="songCard border-hidden">
+                        <div><img src="https://i.scdn.co/image/ab67616d00001e02c53e5adf9f81693d62f98019" alt="img">
+                        </div>
+                        <div>Gehra Hua</div>
+                        <div>ndikdjer</div>
+                    </div>
+                    
+
+                <div class="top artist-card flex justify-between full-width align-items">
+                    <div>Popular Artists</div>
+                    <span>Show all</span>
+                </div>
+
+                <div class="popularArtists flex flex-wrap">
+                    <div class="artistCard songCard">
+                        <div><img class="border-round"
+                                src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="img">
+                        </div>
+                        <div>Pritam</div>
+                        <div>ndikdjer</div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="playbar flex justify-center align-items">
+                <div class="flex invert width height">
+                    <img src="backward-step-svgrepo-com.svg" alt=""><img src="play-svgrepo-com.svg" alt=""><img
+                        src="forward-step-svgrepo-com.svg" alt="">
+                </div>
+
+
+            </div>
+        </section>
+
+    </main>
+
+    <!--                           Footer                              -->
+
+    <!-- <div class="footer flex justify-between align-items ">
+        <div class="flex">
+            <a href="/bucketButton.svg">Preview of Spotify</a>
+            <a href="/home.svg">Sign up to get unlimited songs and podcasts with occasional ads. No credit card
+                needed.</a>
+        </div>
+        <span class="flex justify-center align-items">
+            <a href="singup">Sign UP free</a>
+        </span>
+    </div> -->
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>

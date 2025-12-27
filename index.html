@@ -74,7 +74,7 @@
                     <span><a href="/home.svg">Create Playlist</a></span> -->
 
                     <ul>
-                        <!-- <li class="flex">
+                        <!-- <li class="songList flex">
                             <img class="invert height width " src="music-svgrepo-com.svg" alt="">
                             <div class="info flex flex-direction">
                                 <span>song name</span>
@@ -146,17 +146,25 @@
                         </div>
 
                     </div>
-
-
                 </div>
 
-                <div class="playbar flex justify-center align-items">
-                    <div class="flex invert width height">
-                        <img src="backward-step-svgrepo-com.svg" alt=""><img src="play-svgrepo-com.svg" alt=""><img
-                            src="forward-step-svgrepo-com.svg" alt="">
+                <div class="playbar invert flex justify-center flex-direction">
+                    <div class="flex justify-between align-items">
+                        <div class="songInfo">
+
+                        </div>
+                        <div class="control-container flex width height justify-self">
+                            <img id="previous" src="backward-step-svgrepo-com.svg" alt="">
+                            <img id="play" src="play-svgrepo-com.svg" alt="">
+                            <img id="next" src="forward-step-svgrepo-com.svg" alt="">
+                        </div>
+                        <div class="songTime">
+
+                        </div>
                     </div>
-
-
+                    <div class="seekbar">
+                        <div class="circle border-round"></div>
+                    </div>
                 </div>
         </section>
 

@@ -204,14 +204,14 @@ main {
 
             li {
                 padding: 5px;
-                font-family: poppins,Georgia, 'Times New Roman', Times, serif;
+                font-family: poppins, Georgia, 'Times New Roman', Times, serif;
                 font-size: small;
                 gap: 40px;
             }
         }
-        
-        .card-column li{
-            .info{
+
+        .card-column li {
+            .info {
                 justify-content: flex-start;
                 cursor: pointer;
                 gap: 4px;
@@ -318,17 +318,64 @@ main {
             position: fixed;
             gap: 20px;
             bottom: 8px;
-            height: 7vh;
+            height: 7.5vh;
             border: 2px solid white;
             border-radius: 10px;
-            width: 69vw;
-            background-color: rgb(69 139 61);
+            width: 65vw;
+            background-color: rgb(229 230 229);
             z-index: 10;
 
-            div {
-                gap: 10px;
-
+            .songInfo {
+                /* border: 2px solid black; */
+                margin: 0 10px;
+                width: 150px;
+                height: 23px;
+                overflow :hidden ;
+                font-family: cursive;
             }
+
+            .songTime {
+                display: flex;
+                justify-content: center;
+                /* border: 2px solid black; */
+                margin: 0 10px;
+                height: 20px;
+                width: 150px;
+                justify-self: center;
+            }
+        }
+
+        .control-container {
+            padding: 1px 0 0 0;
+            gap: 10px;
+            margin-top: 2px;
+
+            img {
+                cursor: pointer;
+            }
+        }
+
+        .seekbar {
+            position: relative;
+            border-radius: 10px;
+            bottom: 10px;
+            border: 1px solid black;
+            height: 1px;
+            width: 98%;
+            margin: 0 0 0 8px;
+        }
+
+        .circle {
+            height: 6px;
+            width: 14px;
+            background-color: black;
+            bottom: 7px;
+            position: relative;
+            border-radius: 40px;
+            margin: 0;
+            padding: 2px;
+            border: 2px solid black;
+            left: 0%;
         }
 
     }

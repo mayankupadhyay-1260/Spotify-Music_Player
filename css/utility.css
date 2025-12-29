@@ -1,0 +1,70 @@
+/* Flex */
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.align-items {
+    align-items: center;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.flex-direction{
+    flex-direction: column;
+}
+
+.gap{
+    gap: 5px;
+}
+
+.height {
+    height: 26px;
+}
+.width {
+    width: 20px;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.border {
+    border-radius: 10px;
+}
+
+.border-hidden{
+    border-style: hidden;
+}
+
+.border-round {
+    border-radius: 50%;
+}
+
+.m-1 {
+    margin: 2px;
+}
+
+.invert {
+    filter: invert(1);
+}
+
+.stand {
+    border: 1px solid white;
+    height: 20px;
+    width: 0px;
+}
+
+.justify-self{
+    justify-self: center;
+}

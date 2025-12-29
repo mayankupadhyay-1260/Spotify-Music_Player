@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* ===== Dark Scrollbar (Global) ===== */
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #555 #121212;
+}
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 10px;
+    border: 2px solid #121212;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+}
+
+
+:root {
+    --search-textColor: #c7c7c7bb;
+    --sections-height: 89vh;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.navContainer {
+    width: 100%;
+    height: fit-content;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navbar {
+    margin: 5px;
+    border-radius: 20px;
+    height: 40px;
+    padding: 10px;
+    justify-content: space-between;
+    /* background-color: #1f1f1f; */
+
+    .left {
+        gap: 10px;
+
+        .logo {
+            margin: 0 20px 0 5px;
+        }
+
+        .search {
+            background-color: #1f1f1f;
+        }
+
+        .home {
+            /* background-color: #1f1f1f;    */
+            border: 2px solid black;
+            border-style: hidden;
+            padding: 12px;
+            width: 20px;
+        }
+
+        .searchbox {
+            width: 400px;
+            height: 40px;
+            padding: 3px;
+            justify-content: space-between;
+            background-color: #1f1f1f;
+            border: 2px solid white;
+            border-style: hidden;
+            border-radius: 40px;
+
+            div {
+                gap: 5px;
+                color: var(--search-textColor);
+
+                >span {
+                    margin: 0 2px 0 10px;
+                }
+
+                #searchInput {
+                    height: 22px;
+                    background-color: #1f1f1f;
+                    border-style: hidden;
+                    width: fit-content;
+                    color: var(--search-textColor);
+                }
+
+                #searchInput:focus {
+                    outline: none;
+                }
+            }
+
+        }
+    }
+
+    .bucket {
+        margin-right: 18px;
+        width: 20px;
+        height: 20px;
+        gap: 10px;
+
+        img {
+            padding-right: 2px;
+        }
+    }
+
+    .right {
+        gap: 25px;
+    }
+
+    .buttons {
+        gap: 5px;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+    }
+
+    .signupLogin {
+        gap: 15px;
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 14px;
+            font-family: 'poppins', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 500;
+
+        }
+
+        :nth-child(2) {
+            border: 2px solid white;
+            background-color: white;
+            color: black;
+            border-radius: 30px;
+            padding: 12px 22px;
+        }
+    }
+}
+
+main {
+    gap: 10px;
+
+}
+
+aside {
+    background-color: #121212;
+    border-radius: 10px;
+    width: 25vw;
+    height: var(--sections-height);
+    /* height: 580px; */
+    border: 1px solid white;
+    flex-direction: column;
+    color: white;
+    justify-content: space-between;
+}
+
+aside .libraryCard {
+    width: 97%;
+
+    h2 {
+        margin: 10px 0px 0 10px;
+        font-size: 23px;
+        font-family: poppins, Arial, Helvetica, sans-serif;
+    }
+}
+
+.cards {
+    flex-direction: column;
+    height: 65vh;
+    width: 99%;
+    border: 1px solid white;
+    border-style: hidden;
+    font-weight: bold;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    gap: 20px;
+}
+
+.card-column {
+    justify-content: flex-start;
+    height: 90%;
+    margin: 8px 8px;
+    border: 1px solid var(--search-textColor);
+    background-color: #1e1e1e;
+    border-radius: 13px;
+    flex-direction: column;
+    gap: 5px;
+    padding: 13px 0px 15px 0px;
+}
+
+.card-column ul {
+    margin-bottom: 2px;
+    list-style-type: decimal;
+    overflow-y: scroll;
+
+    li {
+        padding: 5px;
+        font-family: poppins, Georgia, 'Times New Roman', Times, serif;
+        font-size: small;
+        gap: 40px;
+    }
+}
+
+.card-column li {
+    .info {
+        justify-content: flex-start;
+        cursor: pointer;
+        gap: 4px;
+    }
+}
+
+
+footer {
+    gap: 10px;
+    flex-wrap: wrap;
+    height: 70px;
+    font-size: small;
+    border-style: hidden;
+
+    a {
+        text-decoration: none;
+        color: white;
+        font-family: poppins;
+    }
+
+    button {
+        border-style: hidden;
+        border-radius: 20px;
+        width: fit-content;
+        padding: 5px;
+        height: 30px;
+    }
+}
+
+section {
+    width: 73vw;
+    height: var(--sections-height);
+    border: 1px solid white;
+    background-color: #1e1e1e;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    position: relative;
+
+}
+
+.top {
+    gap: 240px;
+    border: 2px solid white;
+    border-style: hidden;
+    width: 90%;
+    height: 70px;
+    color: white;
+    font-size: larger;
+    font-family: poppins, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.mainArea {
+    width: 90%;
+    height: 100%;
+    /* border: 1px solid white; */
+    background-color: #2523238c;
+}
+
+.songCard {
+    width: 185px;
+    height: 280px;
+    /* border: 1px solid white; */
+    margin: 20px;
+
+
+}
+
+.songCard div {
+    color: white;
+}
+
+.songCard :first-child {
+    width: 100%;
+    height: 180px;
+    /* border: 1px solid wheat; */
+    justify-self: flex-start;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.songCard :nth-child(2) {
+    margin: 4px 0 10px 0;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.songCard :nth-child(3) {
+    margin: 4px 0 10px 0;
+    font-size: small;
+    color: #989898;
+}
+
+.artist-card {
+    width: 100%;
+}
+
+.playbar {
+    position: fixed;
+    gap: 20px;
+    bottom: 8px;
+    height: 10vh;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 65vw;
+    background-color: rgb(229 230 229);
+    z-index: 10;
+
+}
+
+.songInfo {
+    /* border: 2px solid black; */
+    margin: 0 10px;
+    width: 150px;
+    height: 23px;
+    overflow: hidden;
+    font-family: cursive;
+}
+
+.songTime {
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+    margin: 0 10px;
+    height: 20px;
+    width: 150px;
+    justify-self: center;
+}
+
+.control-container {
+    padding: 1px 0 0 0;
+    gap: 10px;
+    margin-top: 2px;
+
+}
+
+.control-container img {
+    cursor: pointer;
+}
+
+.seekbar {
+    position: relative;
+    border-radius: 10px;
+    bottom: 10px;
+    border: 1px solid black;
+    height: 4px;
+    width: 98%;
+    margin: 0 0 0 8px;
+    cursor: pointer;
+}
+
+.circle {
+    height: 6px;
+    width: 14px;
+    background-color: black;
+    position: absolute;
+    border-radius: 40px;
+    margin: 0;
+    padding: 2px;
+    border: 2px solid black;
+    left: 0%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+
+/* .footer {
+    height: 7vh;
+    width: 99%;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-image: linear-gradient(72deg, brown, purple, blue);
+    margin-top: 5px;
+    padding-top: 3px;
+
+}
+
+.footer>div {
+    flex-direction: column;
+    margin: 0 20px;
+
+    a {
+        font-size: small;
+        text-decoration: none;
+        color: black;
+        font-family: poppins;
+        color: white;
+    }
+
+}
+
+.footer span {
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    padding: 8px 20px;
+    margin: 0 10px 2px 0;
+
+    a {
+        text-decoration: none;
+        color: black;
+        font-family: poppins;
+    }
+} */
+
+/* Starting applying media queries :  */
+@media (max-width: 950px) {
+    .navContainer {
+        display: flex;
+        width: 950px;
+        height: fit-content;
+        justify-content: center;
+    }
+
+    .hamburger {
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        display: flex;
+        height: 30px;
+        width: 30px;
+        border: 1px solid black;
+        padding: 5px;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        height: fit-content;
+        justify-self: center;
+        gap: 12px;
+    }
+    
+    main {
+        width: 100vw;
+        height: 800px;
+    }
+    
+    aside {
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        transition: all 1s 0s cubic-bezier(0.53, 0.13, 0.37, 0.86);
+        left: -120%;
+        height: 100vh;
+        width: 50vw;
+        z-index: 100;
+    }
+    
+    section {
+        position: absolute;
+        width: 950px;
+        height: 1000px;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+    }
+    
+    .playbar {
+        bottom: 30px;
+        width: 90%;
+    }
+    
+}

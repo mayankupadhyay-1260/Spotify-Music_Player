@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utility.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <div class="navContainer">
+        <span class="hamburger invert border-round">
+            <img src="assets/icons/hamburger-menu-svgrepo-com.svg" alt="">
+        </span>
+
+        <nav class="navbar flex align-items">
+            <div class="left flex align-items">
+                <div class="logo flex invert">
+                    <a href="#">
+                        <img src="assets/images/logo.svg" alt="spotify">
+                    </a>
+                </div>
+
+                <div class="search flex align-items justify-center border-round">
+                    <div class="home flex justify-center align-items invert border-round">
+                        <img src="assets/images/home.svg" alt="home">
+                    </div>
+                </div>
+
+                <form action="searchbox" class="searchbox flex align-items">
+                    <div class="flex align-items">
+                        <span>
+                            <img src="assets/icons/searchButton.svg" alt="search" class="invert width">
+                        </span>
+                        <input id="searchInput" autocomplete="off" type="text"
+                            placeholder="What are you listening to">
+                    </div>
+                    <span class="bucket invert flex">
+                        <span class="stand invert"></span>
+                        <img src="assets/icons/bucketButton.svg" alt="cart">
+                    </span>
+                </form>
+            </div>
+
+            <div class="right flex align-items">
+                <div class="flex buttons flex align-items">
+                    <a href="#">Premium</a>
+                    <a href="#">Support</a>
+                    <a href="#">Download</a>
+                </div>
+
+                <div class="stand"></div>
+
+                <div class="signupLogin flex align-items">
+                    <a href="#">Sign up</a>
+                    <a href="#">LogIN</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Main -->
+    <main class="flex">
+
+        <aside class="flex">
+            <div class="libraryCard flex justify-between">
+                <h2>Your Library</h2>
+                <span class="flex justify-center align-items">
+                    <img src="assets/icons/plusicon.svg" alt="plus" class="height width invert">
+                </span>
+            </div>
+
+            <div class="cards flex">
+                <div class="card-column flex">
+                    <ul></ul>
+                </div>
+            </div>
+
+            <footer class="flex">
+                <div>
+                    <a href="#">Legal</a>
+                    <a href="#">Safety & Privacy Center</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookies</a>
+                    <a href="#">About Ads</a>
+                    <a href="#">Accessibility</a>
+                    <button>English</button>
+                </div>
+            </footer>
+        </aside>
+
+        <section class="border">
+
+            <div class="childNav flex justify-center">
+                <div class="top flex justify-between align-items border-hidden">
+                    <div>Trending Songs</div>
+                    <span>Show all</span>
+                </div>
+            </div>
+
+            <div class="mainArea justify-self">
+                <div class="songArea flex flex-wrap">
+
+                    <div class="songCard border-hidden">
+                        <div>
+                            <img src="https://i.scdn.co/image/ab67616d00001e02c53e5adf9f81693d62f98019" alt="">
+                        </div>
+                        <div>Gehra Hua</div>
+                        <div>ndikdjer</div>
+                    </div>
+
+                    <div class="top artist-card flex justify-between full-width align-items">
+                        <div>Popular Artists</div>
+                        <span>Show all</span>
+                    </div>
+
+                    <div class="popularArtists flex flex-wrap">
+                        <div class="artistCard songCard">
+                            <div>
+                                <img class="border-round"
+                                    src="https://i.scdn.co/image/ab67616100005174cb6926f44f620555ba444fca" alt="">
+                            </div>
+                            <div>Pritam</div>
+                            <div>ndikdjer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Playbar -->
+                <div class="playbar invert flex justify-center flex-direction">
+                    <div class="flex justify-between align-items">
+                        <div class="songInfo"></div>
+
+                        <div class="control-container flex height width">
+                            <img id="previous" src="assets/icons/backward-step-svgrepo-com.svg">
+                            <img id="play" src="assets/icons/play-svgrepo-com.svg">
+                            <img id="next" src="assets/icons/forward-step-svgrepo-com.svg">
+                        </div>
+
+                        <div class="songTime"></div>
+                    </div>
+
+                    <div class="seekbar">
+                        <div class="circle border-round"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

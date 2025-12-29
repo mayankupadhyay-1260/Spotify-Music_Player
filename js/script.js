@@ -29,6 +29,7 @@ function formatTime(seconds) {
 //     return songs;
 // }
 
+// This is for deployement purpose on the static front like netlify
 async function getSongs() {
     const res = await fetch("songs/songs.json");
     return await res.json();

@@ -13,21 +13,27 @@ function formatTime(seconds) {
 }
 
 // This function uses the directory to get the songs :
+// async function getSongs() {
+//     let dir = await fetch("http://127.0.0.1:3000/songs/");
+//     let response = await dir.text();
+//     let div = document.createElement("div");
+//     div.innerHTML = response;
+//     let as = div.getElementsByTagName("a");
+//     let songs = [];
+//     for (let i = 0; i < as.length; i++) {
+//         let element = as[i];
+//         if (element.href.endsWith(".mp3")) {
+//             songs.push(element.href.split("%5Csongs%5C")[1]);
+//         }
+//     }
+//     return songs;
+// }
+
 async function getSongs() {
-    let dir = await fetch("http://127.0.0.1:3000/songs/");
-    let response = await dir.text();
-    let div = document.createElement("div");
-    div.innerHTML = response;
-    let as = div.getElementsByTagName("a");
-    let songs = [];
-    for (let i = 0; i < as.length; i++) {
-        let element = as[i];
-        if (element.href.endsWith(".mp3")) {
-            songs.push(element.href.split("%5Csongs%5C")[1]);
-        }
-    }
-    return songs;
+    const res = await fetch("songs/songs.json");
+    return await res.json();
 }
+
 
 // This function makes the clicking on the songs functionality work : 
 function playMusic(track, pause = false, songName) {

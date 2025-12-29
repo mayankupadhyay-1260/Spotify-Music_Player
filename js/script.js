@@ -35,7 +35,8 @@ function playMusic(track, pause = false, songName) {
     currentSong.src = track
     if (!pause) {
         currentSong.play();
-        play.src = "pause-svgrepo-com.svg"
+        play.src = "assets/icons/pause-svgrepo-com.svg";
+
     }
     document.querySelector(".songInfo").innerHTML = songName;
     document.querySelector(".songTime").innerHTML = "00:00 / 00:00";
@@ -55,14 +56,14 @@ async function main() {
         // This is correct : 
         songUL.innerHTML = songUL.innerHTML + `
         <li class="songList flex" data-song = "http://127.0.0.1:3000/songs/${song}" >
-                            <img class="invert height width " src="music-svgrepo-com.svg" alt="">
+                            <img class="invert height width " src="assets/icons/music-svgrepo-com.svg" alt="">
                             <div class="info flex flex-direction">
                                <span>${song.replaceAll("-", " ")}</span>
                                <span>artist name</span>
                             </div>
                             <div class="flex align-items gap">
                                 <span>Play Now</span>
-                                <img class="invert height width" src="stream-song.svg" alt="">
+                                <img class="invert height width" src="assets/icons/stream-song.svg" alt="">
                             </div>
                            </li>`;
         // This is incorrect : 
@@ -91,11 +92,12 @@ async function main() {
     play.addEventListener("click", () => {
         if (currentSong.paused) {
             currentSong.play();
-            play.src = "pause-svgrepo-com.svg"
+            play.src = "assets/icons/pause-svgrepo-com.svg";
         }
         else {
             currentSong.pause();
-            play.src = "play-svgrepo-com.svg"
+            play.src = "assets/icons/play-svgrepo-com.svg";
+
         }
     })
 
@@ -146,11 +148,12 @@ currentSong.addEventListener("timeupdate", (e) => {
         const isOpen = aside.style.left === "0" || getComputedStyle(aside).left === "0px";
         if (!isOpen) {
             aside.style.left = "0";
-            hambImg.src = "cross-svgrepo-com.svg";
+            hambImg.src = "assets/icons/cross-svgrepo-com.svg";
         } else {
             // aside.style.transition = "all 1s 0s cubic-bezier(0.53, 0.13, 0.37, 0.86)";
             aside.style.left = "-120%";
-            hambImg.src = "hamburger-menu-svgrepo-com.svg";
+            hambImg.src = "assets/icons/hamburger-menu-svgrepo-com.svg";
+
         }
     })
 

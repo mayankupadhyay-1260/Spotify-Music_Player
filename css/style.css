@@ -372,6 +372,14 @@ section {
     cursor: pointer;
 }
 
+.timeAndVolume {
+    position: relative;
+    right: 70px;
+    margin: 0 20px 0 0;
+    justify-content: center;
+    align-items: center;
+}
+
 .seekbar {
     position: relative;
     border-radius: 10px;
@@ -440,7 +448,7 @@ section {
 } */
 
 /* Starting applying media queries :  */
-@media (max-width: 950px) {
+@media screen and (max-width: 950px) {
     .navContainer {
         display: flex;
         width: 950px;
@@ -458,19 +466,19 @@ section {
         border: 1px solid black;
         padding: 5px;
     }
-    
+
     .navbar {
         flex-direction: column;
         height: fit-content;
         justify-self: center;
         gap: 12px;
     }
-    
+
     main {
         width: 100vw;
         height: 800px;
     }
-    
+
     aside {
         margin: 0;
         padding: 0;
@@ -481,7 +489,7 @@ section {
         width: 50vw;
         z-index: 100;
     }
-    
+
     section {
         position: absolute;
         width: 950px;
@@ -489,10 +497,48 @@ section {
         overflow-y: scroll;
         scroll-behavior: smooth;
     }
-    
+
     .playbar {
+        height: 10em;
         bottom: 30px;
         width: 90%;
+        gap: 10px;
     }
-    
+
+
+    .songs-flag {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .songInfo {
+        width: fit-content;
+
+    }
+
+    .control-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .control-container img {
+        height: 20px;
+        width: 20px;
+
+    }
+
+    .timeAndVolume{
+        margin: 0;
+        padding: 0;
+        right: 0px;
+    }
+
+    .seekbar {
+        position: absolute;
+        bottom: 25px;
+    }
+
 }

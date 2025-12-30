@@ -37,8 +37,7 @@
                         <span>
                             <img src="assets/icons/searchButton.svg" alt="search" class="invert width">
                         </span>
-                        <input id="searchInput" autocomplete="off" type="text"
-                            placeholder="What are you listening to">
+                        <input id="searchInput" autocomplete="off" type="text" placeholder="What are you listening to">
                     </div>
                     <span class="bucket invert flex">
                         <span class="stand invert"></span>
@@ -133,7 +132,7 @@
 
                 <!-- Playbar -->
                 <div class="playbar invert flex justify-center flex-direction">
-                    <div class="flex justify-between align-items">
+                    <div class="songs-flag flex     justify-between align-items">
                         <div class="songInfo"></div>
 
                         <div class="control-container flex height width">
@@ -141,8 +140,13 @@
                             <img id="play" src="assets/icons/play-svgrepo-com.svg">
                             <img id="next" src="assets/icons/forward-step-svgrepo-com.svg">
                         </div>
-
-                        <div class="songTime"></div>
+                        <div class="timeAndVolume flex">
+                            <div class="songTime">
+                            </div>
+                            <div>
+                                <img class="width height" src="assets/icons/volume-loud-svgrepo-com.svg" alt="">
+                            </div>
+                        </div>
                     </div>
 
                     <div class="seekbar">
@@ -155,4 +159,5 @@
 
     <script src="js/script.js"></script>
 </body>
+
 </html>

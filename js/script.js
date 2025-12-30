@@ -164,6 +164,8 @@ currentSong.addEventListener("timeupdate", (e) => {
         }
     })
 
+    
+
 
     // console.log(songUL);
 }

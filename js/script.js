@@ -173,6 +173,10 @@ async function main() {
         currentSong.volume = parseInt(e.target.value)/100;
     })
 
+    // Adding a normal card acessibility :
+    document.querySelector(".songCard").getElementsByTagName("div")[0].addEventListener("click",(e)=>{
+        playMusic(`http://127.0.0.1:3000/songs/${songs[0]}`, false, songs[0])
+    })
 
 
     // console.log(songUL);

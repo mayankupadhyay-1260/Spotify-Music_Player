@@ -110,26 +110,26 @@ async function main() {
 
     // Attach an event listener to previous
     previous.addEventListener("click", () => {
-        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+        const currentFile = decodeURIComponent(currentSong.src.split("/").slice(-1)[0]);
+        let index = songs.indexOf(currentFile);
 
         if (index > 0) {
-            playMusic(`http://127.0.0.1:3000/songs/${songs[index - 1]}`, false, songs[index - 1]
-            );
+            playMusic(`http://127.0.0.1:3000/songs/${songs[index - 1]}`, false, songs[index - 1]);
         }
     });
 
     // Attach an event listener to next
     next.addEventListener("click", () => {
-        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
+        const currentFile = decodeURIComponent(currentSong.src.split("/").slice(-1)[0]);
+        let index = songs.indexOf(currentFile);
 
         if (index < songs.length - 1) {
-            playMusic(`http://127.0.0.1:3000/songs/${songs[index + 1]}`, false, songs[index + 1]
-            );
+            playMusic(`http://127.0.0.1:3000/songs/${songs[index + 1]}`, false, songs[index + 1]);
         }
     });
 
     // Updating Time throught timeupdate function :-
-currentSong.addEventListener("timeupdate", (e) => {
+    currentSong.addEventListener("timeupdate", (e) => {
         // console.log(currentSong.currentTime,currentSong.duration);  
         document.querySelector(".songTime").innerHTML = `${formatTime(currentSong.currentTime)}/${formatTime(currentSong.duration)}`;
 
@@ -164,7 +164,15 @@ currentSong.addEventListener("timeupdate", (e) => {
         }
     })
 
-    
+    // Applying functionality to the volume meter :
+
+    // We use target.value to find the value of the point of click or point of instance :
+
+    // The .volume property in the audio element gives takes value between 0 and 1 so we have to divide it by 100 :
+    document.querySelector(".song-volume").getElementsByTagName("input")[0].addEventListener("change",(e)=>{
+        currentSong.volume = parseInt(e.target.value)/100;
+    })
+
 
 
     // console.log(songUL);

@@ -364,7 +364,7 @@ section {
 .control-container {
     padding: 1px 0 0 0;
     gap: 10px;
-    margin-top: 2px;
+    margin: 2px 50px 0 0;
 
 }
 
@@ -373,7 +373,7 @@ section {
 }
 
 .timeAndVolume {
-    position: relative;
+    position: sticky;
     right: 70px;
     margin: 0 20px 0 0;
     justify-content: center;
@@ -507,10 +507,12 @@ section {
 
 
     .songs-flag {
+        position: relative;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 10px;
+        top: -15px;
         margin: 10px 0;
     }
 
@@ -530,10 +532,17 @@ section {
 
     }
 
-    .timeAndVolume{
+    .timeAndVolume {
         margin: 0;
         padding: 0;
         right: 0px;
+    }
+
+    .volume-check {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
     }
 
     .seekbar {

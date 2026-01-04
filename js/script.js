@@ -12,23 +12,6 @@ function formatTime(seconds) {
     return `${String(mins).padStart(2, "0")}:${String(secs).padStart(2, "0")}`;
 }
 
-// This function uses the directory to get the songs :
-// async function getSongs() {
-//     let dir = await fetch("http://127.0.0.1:3000/songs/");
-//     let response = await dir.text();
-//     let div = document.createElement("div");
-//     div.innerHTML = response;
-//     let as = div.getElementsByTagName("a");
-//     let songs = [];
-//     for (let i = 0; i < as.length; i++) {
-//         let element = as[i];
-//         if (element.href.endsWith(".mp3")) {
-//             songs.push(element.href.split("%5Csongs%5C")[1]);
-//         }
-//     }
-//     return songs;
-// }
-
 async function getSongs() {
     const res = await fetch("songs/songs.json");
     return await res.json();

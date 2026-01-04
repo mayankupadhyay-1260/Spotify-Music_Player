@@ -29,7 +29,6 @@ function formatTime(seconds) {
 //     return songs;
 // }
 
-// This is for deployement purpose on the static front like netlify
 async function getSongs() {
     const res = await fetch("songs/songs.json");
     return await res.json();
@@ -55,14 +54,14 @@ async function main() {
     // Get list of songs : 
     songs = await getSongs();
     console.log(songs)
-    playMusic(`http://127.0.0.1:3000/songs/${songs[0]}`, true, songs[0])
+    playMusic(`songs/${songs[0]}`, true, songs[0])
 
     // Here we are making functionality to show song names on webpage
     let songUL = document.querySelector(".card-column").getElementsByTagName("ul")[0];
     for (const song of songs) {
         // This is correct : 
         songUL.innerHTML = songUL.innerHTML + `
-        <li class="songList flex" data-song = "http://127.0.0.1:3000/songs/${song}" >
+        <li class="songList flex" data-song = "songs/${song}" >
                             <img class="invert height width " src="assets/icons/music-svgrepo-com.svg" alt="">
                             <div class="info flex flex-direction">
                                <span>${song.replaceAll("-", " ")}</span>
@@ -110,26 +109,26 @@ async function main() {
 
     // Attach an event listener to previous
     previous.addEventListener("click", () => {
-        const currentFile = decodeURIComponent(currentSong.src.split("/").slice(-1)[0]);
-        let index = songs.indexOf(currentFile);
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
 
         if (index > 0) {
-            playMusic(`http://127.0.0.1:3000/songs/${songs[index - 1]}`, false, songs[index - 1]);
+            playMusic(`songs/${songs[index - 1]}`, false, songs[index - 1]
+            );
         }
     });
 
     // Attach an event listener to next
     next.addEventListener("click", () => {
-        const currentFile = decodeURIComponent(currentSong.src.split("/").slice(-1)[0]);
-        let index = songs.indexOf(currentFile);
+        let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
 
         if (index < songs.length - 1) {
-            playMusic(`http://127.0.0.1:3000/songs/${songs[index + 1]}`, false, songs[index + 1]);
+            playMusic(`songs/${songs[index + 1]}`, false, songs[index + 1]
+            );
         }
     });
 
     // Updating Time throught timeupdate function :-
-    currentSong.addEventListener("timeupdate", (e) => {
+currentSong.addEventListener("timeupdate", (e) => {
         // console.log(currentSong.currentTime,currentSong.duration);  
         document.querySelector(".songTime").innerHTML = `${formatTime(currentSong.currentTime)}/${formatTime(currentSong.duration)}`;
 
@@ -162,20 +161,6 @@ async function main() {
             hambImg.src = "assets/icons/hamburger-menu-svgrepo-com.svg";
 
         }
-    })
-
-    // Applying functionality to the volume meter :
-
-    // We use target.value to find the value of the point of click or point of instance :
-
-    // The .volume property in the audio element gives takes value between 0 and 1 so we have to divide it by 100 :
-    document.querySelector(".song-volume").getElementsByTagName("input")[0].addEventListener("change",(e)=>{
-        currentSong.volume = parseInt(e.target.value)/100;
-    })
-
-    // Adding a normal card acessibility :
-    document.querySelector(".songCard").getElementsByTagName("div")[0].addEventListener("click",(e)=>{
-        playMusic(`http://127.0.0.1:3000/songs/${songs[0]}`, false, songs[0])
     })
 
 

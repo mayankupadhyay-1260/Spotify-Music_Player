@@ -146,6 +146,11 @@ currentSong.addEventListener("timeupdate", (e) => {
         }
     })
 
+    // The .volume property in the audio element gives takes value between 0 and 1 so we have to divide it by 100 :
+    document.querySelector(".song-volume").getElementsByTagName("input")[0].addEventListener("change",(e)=>{
+        currentSong.volume = parseInt(e.target.value)/100;
+    })
+
 
     // console.log(songUL);
 }

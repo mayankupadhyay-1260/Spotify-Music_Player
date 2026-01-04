@@ -54,14 +54,14 @@ async function main() {
     // Get list of songs : 
     songs = await getSongs();
     console.log(songs)
-    playMusic(`http://127.0.0.1:3000/songs/${songs[0]}`, true, songs[0])
+    playMusic(`songs/${songs[0]}`, true, songs[0])
 
     // Here we are making functionality to show song names on webpage
     let songUL = document.querySelector(".card-column").getElementsByTagName("ul")[0];
     for (const song of songs) {
         // This is correct : 
         songUL.innerHTML = songUL.innerHTML + `
-        <li class="songList flex" data-song = "http://127.0.0.1:3000/songs/${song}" >
+        <li class="songList flex" data-song = "songs/${song}" >
                             <img class="invert height width " src="assets/icons/music-svgrepo-com.svg" alt="">
                             <div class="info flex flex-direction">
                                <span>${song.replaceAll("-", " ")}</span>
@@ -112,7 +112,7 @@ async function main() {
         let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
 
         if (index > 0) {
-            playMusic(`http://127.0.0.1:3000/songs/${songs[index - 1]}`, false, songs[index - 1]
+            playMusic(`songs/${songs[index - 1]}`, false, songs[index - 1]
             );
         }
     });
@@ -122,7 +122,7 @@ async function main() {
         let index = songs.indexOf(currentSong.src.split("/").slice(-1)[0]);
 
         if (index < songs.length - 1) {
-            playMusic(`http://127.0.0.1:3000/songs/${songs[index + 1]}`, false, songs[index + 1]
+            playMusic(`songs/${songs[index + 1]}`, false, songs[index + 1]
             );
         }
     });
